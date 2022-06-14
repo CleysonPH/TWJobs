@@ -1,0 +1,30 @@
+@startuml TWJobs
+
+Candidacy -- Candidate
+Candidacy -- Job
+
+class Job {
+    - uint id
+    - string title
+    - string company
+    - decimal salary
+    - List<string> requirements
+}
+
+class Candidate {
+    - uint id
+    - string name
+    - string email
+    - datetime birthDate
+    - string linkedin
+    - string portfolio
+}
+
+class JobApplication {
+    - uint id
+    - Job job
+    - Candidate candidate
+    - datetime createdAt
+}
+
+@enduml
